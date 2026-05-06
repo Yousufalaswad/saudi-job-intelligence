@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from database import (
     get_job_postings, get_skills_demand,
     get_salary_benchmarks, get_nitaqat_rules, get_v2030_targets
