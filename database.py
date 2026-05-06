@@ -12,6 +12,10 @@ except Exception:
     SUPABASE_URL = os.getenv("SUPABASE_URL")
     SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 
+# Debug — remove after fixing
+import logging
+logging.warning(f"SUPABASE_URL loaded: {bool(SUPABASE_URL)} — starts with: {str(SUPABASE_URL)[:30] if SUPABASE_URL else 'NONE'}")    
+
 def get_client() -> Client:
     return create_client(SUPABASE_URL, SUPABASE_KEY)
 
